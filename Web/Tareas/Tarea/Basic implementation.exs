@@ -6,6 +6,7 @@
 
 
 # Función principal para el análisis léxico de expresiones aritméticas
+defmodule DFA do
 def arithmetic_lexer(input_string) do
   automata = {&TokenList.delta_arithmetic/2, [:int, :float, :var, :exp, :int_space, :float_space, :par_close, :varspace, :par_close_space], :start}
   input_string

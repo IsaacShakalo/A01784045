@@ -1,0 +1,6 @@
+.comment { color: gray; font-style: italic; }
+.reserved { color: red; }
+.variable { color: blue; }
+.string { color: green; }
+.number { color: orange; }
+.whitespace { color: red; }

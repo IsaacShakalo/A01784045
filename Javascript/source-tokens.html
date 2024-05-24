@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tokens</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<pre>
+<span class="comment">// Define variables and constants</span>
+
+<span class="reserved">let</span><span class="whitespace"> </span><span class="variable">x</span><span class="string"> = </span><span class="number">5</span><span class="string">;
+</span>
+<span class="reserved">const</span><span class="whitespace"> </span><span class="variable">PI</span><span class="string"> = </span><span class="number">3</span><span class="whitespace">.</span><span class="number">14</span><span class="string">;
+</span>
+
+
+<span class="comment">// Arithmetic operations</span>
+
+<span class="reserved">let</span><span class="whitespace"> </span><span class="variable">y</span><span class="string"> = </span><span class="variable">x</span><span class="string"> + </span><span class="number">3</span><span class="string">;
+</span>
+<span class="reserved">let</span><span class="whitespace"> </span><span class="variable">z</span><span class="string"> = </span><span class="variable">x</span><span class="string"> * </span><span class="variable">y</span><span class="string">;
+</span>
+
+
+<span class="comment">// String manipulation</span>
+
+<span class="reserved">let</span><span class="whitespace"> </span><span class="variable">message</span><span class="string"> = "</span><span class="variable">Hello</span><span class="string">, ";
+</span>
+<span class="reserved">let</span><span class="whitespace"> </span><span class="variable">name</span><span class="string"> = "</span><span class="variable">John</span><span class="string">";
+</span>
+<span class="reserved">let</span><span class="whitespace"> </span><span class="variable">greeting</span><span class="string"> = </span><span class="variable">message</span><span class="string"> + </span><span class="variable">name</span><span class="string">;
+</span>
+
+
+<span class="comment">// Conditional statements</span>
+
+<span class="reserved">if</span><span class="string"> (</span><span class="variable">x</span><span class="string"> > </span><span class="number">0</span><span class="string">) {
+</span>
+<span class="whitespace">    </span><span class="reserved">console</span><span class="whitespace">.</span><span class="variable">log</span><span class="string">("</span><span class="variable">x</span><span class="whitespace"> </span><span class="variable">is</span><span class="whitespace"> </span><span class="variable">positive</span><span class="string">");
+</span>
+<span class="string">} </span><span class="reserved">else</span><span class="whitespace"> </span><span class="reserved">if</span><span class="string"> (</span><span class="variable">x</span><span class="string"> === </span><span class="number">0</span><span class="string">) {
+</span>
+<span class="whitespace">    </span><span class="reserved">console</span><span class="whitespace">.</span><span class="variable">log</span><span class="string">("</span><span class="variable">x</span><span class="whitespace"> </span><span class="variable">is</span><span class="whitespace"> </span><span class="variable">zero</span><span class="string">");
+</span>
+<span class="string">} </span><span class="reserved">else</span><span class="string"> {
+</span>
+<span class="whitespace">    </span><span class="reserved">console</span><span class="whitespace">.</span><span class="variable">log</span><span class="string">("</span><span class="variable">x</span><span class="whitespace"> </span><span class="variable">is</span><span class="whitespace"> </span><span class="variable">negative</span><span class="string">");
+</span>
+<span class="string">}
+</span>
+
+
+<span class="comment">// Loops</span>
+
+<span class="reserved">for</span><span class="string"> (</span><span class="reserved">let</span><span class="whitespace"> </span><span class="variable">i</span><span class="string"> = </span><span class="number">0</span><span class="string">; </span><span class="variable">i</span><span class="string"> < </span><span class="number">5</span><span class="string">; </span><span class="variable">i</span><span class="string">++) {
+</span>
+<span class="whitespace">    </span><span class="reserved">console</span><span class="whitespace">.</span><span class="variable">log</span><span class="string">("</span><span class="variable">Iteration</span><span class="string">", </span><span class="variable">i</span><span class="string">);
+</span>
+<span class="string">}
+</span>
+
+
+<span class="comment">// Arrays</span>
+
+<span class="reserved">let</span><span class="whitespace"> </span><span class="variable">numbers</span><span class="string"> = [</span><span class="number">1</span><span class="string">, </span><span class="number">2</span><span class="string">, </span><span class="number">3</span><span class="string">, </span><span class="number">4</span><span class="string">, </span><span class="number">5</span><span class="string">];
+</span>
+<span class="reserved">console</span><span class="whitespace">.</span><span class="variable">log</span><span class="string">("</span><span class="variable">Third</span><span class="whitespace"> </span><span class="variable">element</span><span class="whitespace"> </span><span class="variable">of</span><span class="whitespace"> </span><span class="variable">the</span><span class="whitespace"> </span><span class="variable">array</span><span class="string">:", </span><span class="variable">numbers</span><span class="string">[</span><span class="number">2</span><span class="string">]);
+</span>
+
+
+<span class="comment">// Functions</span>
+
+<span class="reserved">function</span><span class="whitespace"> </span><span class="variable">add</span><span class="string">(</span><span class="variable">a</span><span class="string">, </span><span class="variable">b</span><span class="string">) {
+</span>
+<span class="whitespace">    </span><span class="reserved">return</span><span class="whitespace"> </span><span class="variable">a</span><span class="string"> + </span><span class="variable">b</span><span class="string">;
+</span>
+<span class="string">}
+</span>
+
+
+<span class="reserved">let</span><span class="whitespace"> </span><span class="variable">sum</span><span class="string"> = </span><span class="variable">add</span><span class="string">(</span><span class="number">2</span><span class="string">, </span><span class="number">3</span><span class="string">);
+</span>
+<span class="reserved">console</span><span class="whitespace">.</span><span class="variable">log</span><span class="string">("</span><span class="variable">Sum</span><span class="string">:", </span><span class="variable">sum</span><span class="string">);
+</span>
+
+
+<span class="comment">// Objects</span>
+
+<span class="reserved">let</span><span class="whitespace"> </span><span class="variable">person</span><span class="string"> = {
+</span>
+<span class="whitespace">    </span><span class="variable">name</span><span class="string">: "</span><span class="variable">Alice</span><span class="string">",
+</span>
+<span class="whitespace">    </span><span class="variable">age</span><span class="string">: </span><span class="number">30</span><span class="string">,
+</span>
+<span class="whitespace">    </span><span class="variable">isStudent</span><span class="string">: </span><span class="reserved">true</span>
+
+<span class="string">};
+</span>
+
+
+<span class="reserved">console</span><span class="whitespace">.</span><span class="variable">log</span><span class="string">("</span><span class="variable">Name</span><span class="string">:", </span><span class="variable">person</span><span class="whitespace">.</span><span class="variable">name</span><span class="string">);
+</span>
+<span class="reserved">console</span><span class="whitespace">.</span><span class="variable">log</span><span class="string">("</span><span class="variable">Age</span><span class="string">:", </span><span class="variable">person</span><span class="whitespace">.</span><span class="variable">age</span><span class="string">);
+</span>
+<span class="reserved">console</span><span class="whitespace">.</span><span class="variable">log</span><span class="string">("</span><span class="variable">Is</span><span class="whitespace"> </span><span class="variable">student</span><span class="string">?", </span><span class="variable">person</span><span class="whitespace">.</span><span class="variable">isStudent</span><span class="string">);
+</span>
+</pre>
+</body>
+</html>

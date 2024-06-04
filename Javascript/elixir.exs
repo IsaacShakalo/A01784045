@@ -9,10 +9,10 @@ defmodule Tfile do
 
   def get_reserved_words(in_filename, out_filename) do
     # Abrimos el archivo de salida para escribir los resultados
-    {:ok, out_fd} = File.open(out_filename, [:write])
+    {:ok, out} = File.open(out_filename, [:write])
 
     # Escribimos el inicio del archivo HTML
-    IO.write(out_fd, """
+    IO.write(out, """
     <!DOCTYPE html>
     <html>
     <head>
@@ -26,21 +26,21 @@ defmodule Tfile do
     # Leemos el archivo de entrada línea por línea y lo procesamos
     in_filename
     |> File.stream!()
-    |> Enum.each(&process_line(&1, out_fd))
+    |> Enum.each(&process_line(&1, out))
 
     # Escribimos el fin del archivo HTML
-    IO.write(out_fd, "</pre>\n</body>\n</html>")
+    IO.write(out, "</pre>\n</body>\n</html>")
 
-    File.close(out_fd)
+    File.close(out)
   end
 
   # Función auxiliar para procesar cada línea del archivo de entrada
-  defp process_line(line, out_fd) do
+  defp process_line(line, out) do
     # Verificamos si la línea contiene un comentario
     if Regex.match?(@comment_regex, line) do
       # Reemplazamos todo el comentario con el span del comentario
       line = Regex.replace(@comment_regex, line, fn match -> "<span class=\"comment\">#{match}</span>" end)
-      IO.write(out_fd, "#{line}\n")
+      IO.write(out, "#{line}\n")
     else
       # Procesamos la línea en busca de palabras reservadas, variables, cadenas, números y espacios en blanco
       words = String.split(line, ~r/(\W+)/, include_captures: true)
@@ -62,7 +62,7 @@ defmodule Tfile do
         end
       end) |> Enum.join("")
 
-      IO.write(out_fd, "#{formatted_line}\n")
+      IO.write(out, "#{formatted_line}\n")
     end
   end
 end
